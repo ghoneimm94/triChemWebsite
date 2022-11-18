@@ -1,0 +1,83 @@
+<!--Start BreadCrumb-->
+<div class="breadcrumb primary-bg br-0 mb-0">
+  <span
+    [routerLink]="['/home']"
+    routerLinkActive="router-link-active"
+    class="breadcrumb-item text-white cursor-pointer"
+    >{{ 'header.home' | translate }}</span
+  >
+  <span class="breadcrumb-item text-white">
+    <i *ngIf="lang.userLang === 'en'" class="fa fa-angle-right"></i>
+    <i *ngIf="lang.userLang === 'ar'" class="fa fa-angle-left"></i>
+  </span>
+  <span class="breadcrumb-item text-white cursor-pointer">{{
+    'header.certificates' | translate
+  }}</span>
+</div>
+<!--End BreadCrumb-->
+<!--Start Section Our Products-->
+<div class="our-products bg-white">
+  <div class="text-center pb-lg-5 pb-4">
+    <h2
+      class="text-center text-uppercase primary-text font-weight-bold fs-45 d-block"
+    >
+      {{ 'certificates.title' | translate }}
+    </h2>
+  </div>
+  <div class="products-box p-lg-3">
+    <div class="row px-0 mx-0">
+      <!--Start Repeatable col-->
+      <div
+        *ngFor="let certificate of certificates"
+        class="col-lg-4 col-md-4 col-12 mb-3 b-6 cats"
+      >
+        <!-- Card Light -->
+        <div class="card bg-white">
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Title -->
+            <h4 class="card-title text-left">
+              {{
+                lang.userLang === 'ar'
+                  ? certificate.Title_Ar
+                  : certificate.Title
+              }}
+            </h4>
+            <hr />
+            <!-- Text -->
+            <!-- Link -->
+            <div
+              class="pdf-container position-relative d-block text-center mb-2"
+              style="right:0;"
+            >
+              <a
+                class="pdf py-2 px-3 d-flex justify-content-between align-items-center mx-auto"
+                style="width: 290px;"
+                [href]="certificate.FilePath"
+                target="_blank"
+              >
+                <div class="d-flex align-items-center">
+                  <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                  <span class="pl-3">
+                    <span class="d-block dark-text-alt fs-14">{{
+                      lang.userLang === 'ar' ? 'تحميل' : 'Download'
+                    }}</span>
+                    <span class="d-block primary-text fs-12"></span>
+                  </span>
+                </div>
+                <img
+                  class=""
+                  src="assets/imgs/icons/down-arrow.png"
+                  alt="pdf"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Card Light -->
+      </div>
+      <!--End Repeatable col-->
+    </div>
+  </div>
+  <!--End Section Our Products-->
+</div>

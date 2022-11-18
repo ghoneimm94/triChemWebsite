@@ -1,0 +1,195 @@
+<div class="header fixed-top header-shadow">
+  <!--Top Header-->
+  <div class="top-header primary-bg">
+    <ul class="p-0 m-0 list-unstyled float-right">
+      <li class="d-inline">
+        <img
+          class="d-inline-block mr-2"
+          src="assets/imgs/icons/email.png"
+          height="16"
+          width="23"
+          alt="email"
+        />
+        <span class="d-inline-block fs-14 text-white">{{
+          contactInfo.salesMail
+        }}</span>
+      </li>
+      <li class="d-inline">
+        <img
+          class="d-inline-block mr-2"
+          src="assets/imgs/icons/phone.png"
+          height="18"
+          width="18"
+          alt="phone"
+        />
+        <span class="d-inline-block fs-14 text-white">{{
+          contactInfo.mobileNum
+        }}</span>
+      </li>
+      <li class="d-inline">
+        <a [href]="contactInfo.facebook" target="_blank">
+          <img
+            class="d-inline-block"
+            src="assets/imgs/icons/facebook.png"
+            class="mx-1"
+            height="19"
+            width="20"
+            alt="search"
+          />
+        </a>
+        <a [href]="contactInfo.twitter" target="_blank">
+          <img
+            class="d-inline-block"
+            src="assets/imgs/icons/twitter.png"
+            class="mx-1"
+            height="19"
+            width="20"
+            alt="search"
+          />
+        </a>
+        <a [href]="contactInfo.linkedIn" target="_blank">
+          <img
+            class="d-inline-block"
+            src="assets/imgs/icons/linkedin.png"
+            class="mx-1"
+            height="19"
+            width="20"
+            alt="search"
+          />
+        </a>
+      </li>
+      <li class="d-inline">
+        <a [href]="contactInfo.location" target="_blank">
+          <img
+            class="d-inline-block mr-2"
+            src="assets/imgs/icons/map.png"
+            height="19"
+            width="20"
+            alt="map"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--End Top Header-->
+
+  <div class="clearfix"></div>
+
+  <!--Start Nav-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand mr-1" href="#">
+      <img
+        src="assets/imgs/logo.png"
+        height="89"
+        width="175"
+        alt="logo"
+        class="img-fluid"
+      />
+    </a>
+
+    <span
+      class="d-inline-block text-center text-uppercase"
+      style="line-height: 1.2; color: #363636;"
+    >
+      <!-- <span class="d-block fs-13" style="font-family: 'RobotoCondensed-Regular', Arial, serif !important;">The Best
+        Choice</span> -->
+      <span
+        class="d-block fs-18"
+        style="color: red; font-family: 'DroidKufi-Regular' !important;"
+      >
+        {{ translate.currentLang === 'ar' ? 'الإختيار الأفضل' : 'Best Choice' }}
+      </span>
+    </span>
+
+    <button
+      class="navbar-toggler ml-auto custom-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto pb-lg-0 pb-3">
+        <li
+          class="nav-item"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a
+            [routerLink]="['/home']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.home' | translate }}</a
+          >
+        </li>
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/aboutUs']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.aboutUs' | translate }}
+          </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/categories']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.products' | translate }}</a
+          >
+        </li>
+
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/newsAndEvents']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.news' | translate }}</a
+          >
+        </li>
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/certificates']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.certificates' | translate }}</a
+          >
+        </li>
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/customercertificates']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.customerCertificates' | translate }}</a
+          >
+        </li>
+        <!-- <li class="nav-item" [routerLinkActive]="'active'">
+          <a [routerLink]="['/history']" href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase">{{ 'header.history' | translate }}</a>
+        </li> -->
+        <li class="nav-item" [routerLinkActive]="'active'">
+          <a
+            [routerLink]="['/contactUs']"
+            href="#"
+            class="nav-link d-inline-block fs-14 text-uppercase"
+            >{{ 'header.contactUs' | translate }}</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="changeLanguage()"
+            class="nav-link d-inline-block primary-alt-bg px-2 rounded-circle fs-15 text-white text-uppercase cursor-pointer"
+            >{{ translate.currentLang === 'ar' ? 'En' : 'Ar' }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--End Nav-->
+</div>

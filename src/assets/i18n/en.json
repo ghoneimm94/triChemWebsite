@@ -1,0 +1,96 @@
+{
+  "home": {
+    "backgroundImageText": "We cannot do all good that the world needs, But the world needs all the good that we can do.",
+    "sliderTitle": "We combines creative thinking",
+    "sliderContect1": "To provide innovative product, we ensure our products perform to the highest",
+    "sliderContect2": "standards and optimize operational efficiency for customers",
+    "ourProducts": "Our Products",
+    "chairmanTitle": "CHAIRMAN OF TRI-CHEM",
+    "chairmanContect1": "Tri-chem combines creative thinking with advanced know-how, to provide innovative products s.  We ensure our products perform to the highest standards and optimize operational efficiency for customers.",
+    "chairmanContect2": "Tri-chem is aiming to provide and maintain highest quality standards with Construction Chemicals  products and services. The commitment to innovation enables Tri-chem to not only satisfy current demands, but also anticipate future expectations. ",
+    "promo": "TRICHEM PROMO",
+    "ourProductsSection": "OUR PRODUCTS",
+    "ourProductsSectionTitle": "Check some of our latest products",
+    "viewDetails": "View Details",
+    "checkAllProducts": "Check All Products",
+    "clientsFeedbackTitle1": "WHAT OUR CLIENTS SAY",
+    "clientsFeedbackTitle2": "Dummy text of the printing and typesetting industry",
+    "newsSection": "NEWS & EVENTS",
+    "newsSectionTitle": "Latest News and events",
+    "checkAllNews": "Check All News & Events",
+    "ourclients": "OUR CLIENTS",
+    "ourclientsTitle": "Our clients list"
+  },
+  "aboutUs": {
+    "title": "ABOUT US",
+    "about": "ABOUT TRI-CHEM",
+    "trichem": "Tri-chem,",
+    "p1": "the Egyptian Construction Chemicals Company, Founded in Egypt in 2009. Tri-chem combines creative thinking with advanced know-how, to provide innovative products s. We ensure our products perform to the highest standards and optimize operational efficiency for customers.",
+    "p2": "Quality is standard in all our products,services and practices, and this supported by an unerring commitment to operational safety and care for the environment. We are passionate about employing the best people in the business and to their ongoing development within a culture of teamwork and collaboration.",
+    "p3": "Our core values embrace the pursuit of performance excellence and continuous improvement in everything we do. It is with this that Tri-chem looks forward to the future, to remain thought-leaders in the Construction Chemicals industry and work closely with its customers to provide the innovative, effective solutions of tomorrow.",
+    "title2": "INNOVATION AND GROWTH",
+    "p4": "Growth results from innovation, and this, in turn, depends on research. Research and development (R&D) thus enjoy an accordingly high priority within the company. The R&D strategy adopted by Tri-chem has yielded a high innovation rate, with numerous patents plus a wide range of new products.",
+    "p5": "The Tri-chem Spirit is a synonym of the strong set of values and principles . Five management principles are expressing the corporate culture and are the foundation of future success:",
+    "1.Title": "1. Customers First",
+    "1.p": "Tri-chem is dedicated to provide and maintain highest quality standards with its products and services. The commitment to innovation enables Tri-chem to not only satisfy current demands, but also anticipate future expectations.",
+    "2.Title": "2. COURAGE FOR INNOVATION",
+    "2.p": "Tri-chem’s success is based on its tradition of innovation. Accordingly, the core of the business is innovation management and focus on developing quality products and the best solutions for customers.",
+    "3.Title": "3. SUSTAINABILITY & INTEGRITY",
+    "3.p": "Tri-chem takes a perspective on the development of the business and acts with respect and responsibility towards its customers, stakeholders and employees. Tri-chem operates with a strong focus on safety, quality, environment, fair treatment, social involvement, responsible growth, and value creation.",
+    "3.p.2": "Sustainability is a key component of the company's innovation drive. Tri-chem aims to enhance durability and improve both energy and material efficiency. The company keeps making every effort to contribute to reducing resource consumption both within the company as well as for its partners who trust in Tri-chem 's products.",
+    "3.p.3": "Throughout all this, Tri-chem puts safety first. The well-being and health of the employees and partners is a prerequisite to Tri-chem 's success. Creating safe work environments is always a top priority.",
+    "4.Title": "4. EMPOWERMENT & RESPECT",
+    "4.p": "Tri-chem believes in the competence and the entrepreneurial spirit of its employees. Tri-chem fosters trustful and respectful working relationships and doesn’t exercise authority in purely formal ways. Tri-chem 's employees enjoy working in close partnership with each other and with the customers, suppliers and stakeholders. Training and development of employees is given high priority. Tri-chem aims to develop its leaders for tomorrow and focuses on internal candidates for promotions.",
+    "5.Title": "5. MANAGE FOR RESULTS",
+    "5.p": "Tri-chem aims for success and takes pride in continuously achieving outstanding results and outperforming its markets. The company pursues the vision and targets with persistency and a long-term view. Tri-chem believes in individual responsibilities. Functions and projects will be clearly assigned.",
+    "5.p2": "Tri-chem has transparent benchmarks for financial performance following a defined strategy. Performance evaluation is based on market share, sales growth, profitability and capital efficiency."
+  },
+  "categories": {
+    "title": "PRODUCTS",
+    "searchPlaceHolder": "Search For Products"
+  },
+  "certificates": {
+    "title": "CERTIFICATES"
+  },
+  "productDetails": {
+    "Desc": "Description",
+    "typicalApps": "Typical Applications",
+    "productFeatures": "Product Features",
+    "props": "Properties",
+    "relatedProducts": "RELATED PRODUCTS",
+    "tds": "TDS",
+    "certificate": "Test Certificate"
+  },
+  "contactUs": {
+    "title": "CONTACT US",
+    "factory": "Factory",
+    "factoryTel": "Factory Tel",
+    "technicalSupport": "Technical Support",
+    "sales": "Sales",
+    "website": "Website",
+    "email": "Email",
+    "phone": "Phone Number",
+
+    "address": "6th of October City, Ard Almotawreen, First Industrial Park, Plot 14",
+
+    "name": "Name",
+    "message": "Message",
+
+    "submit": "Submit"
+  },
+  "header": {
+    "home": "Home",
+    "aboutUs": "ABOUT US",
+    "products": "PRODUCTS",
+    "news": "NEWS & EVENTS",
+    "certificates": "CERTIFICATES",
+    "customerCertificates": "CUSTOMER CERTIFICATES",
+    "history": "HISTORY",
+    "contactUs": "CONTACT US"
+  },
+  "footer": {
+    "aboutUs": "trichem chemical constructions founded in 2009  at 6th of October city ",
+    "siteMap": "Site Map",
+    "rights": "All Rights Reserved"
+  }
+}

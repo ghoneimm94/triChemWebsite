@@ -1,0 +1,122 @@
+<!--Start BreadCrumb-->
+<div class="breadcrumb primary-bg br-0 mb-0">
+  <span
+    [routerLink]="['/home']"
+    routerLinkActive="router-link-active"
+    class="breadcrumb-item text-white cursor-pointer"
+    >{{ 'header.home' | translate }}</span
+  >
+  <span class="breadcrumb-item text-white">
+    <i *ngIf="lang.userLang === 'en'" class="fa fa-angle-right"></i>
+    <i *ngIf="lang.userLang === 'ar'" class="fa fa-angle-left"></i>
+  </span>
+  <span class="breadcrumb-item text-white cursor-pointer">{{
+    'header.news' | translate
+  }}</span>
+</div>
+<!--End BreadCrumb-->
+<!--Start Section news-events-->
+<div class="section-news-events" style="background: #EAEEF2;">
+  <div class="text-center pb-lg-5">
+    <h2
+      class="text-center text-uppercase primary-text font-weight-bold fs-45 d-block"
+    >
+      {{ 'home.newsSection' | translate }}
+    </h2>
+  </div>
+  <div class="news-box p-lg-3">
+    <div class="row px-0 mx-0">
+      <!--Start Repeatable col-->
+      <!-- [routerLink]="['/newsAndeventsdetails', item.Id]" -->
+      <!-- <div *ngFor="let item of news" class="col-lg-4 col-md-6 col-12 mb-3 b-6">
+        <div class="card b-6 border-0">
+          <img class="card-img-top img-fluid b-6" [src]="item.ImageURL" alt="news" />
+          <div class="card-body">
+            <h4 class="card-title text-left fs-20 font-weight-bold dark-text-alt">
+              {{ lang.userLang === 'ar' ? item.Title_Ar : item.Title }}
+            </h4>
+            <p class="card-text text-left fs-16 dark-text-alt">
+              {{
+                lang.userLang === 'ar' ? item.Description_Ar : item.Description
+              }}
+            </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!--Start Repeatable col-->
+      <div
+        *ngFor="let item of news"
+        class="col-lg-4 col-md-6 col-12 mb-3 b-6"
+        style="height: 455px;"
+      >
+        <div class="card h-100 border-0 b-6">
+          <mdb-carousel [animation]="'slide'" [isControls]="false">
+            <mdb-carousel-item
+              *ngFor="let img of item.ImageURL.split(','); let i = index"
+              style="height: 247px;"
+            >
+              <img
+                class="card-img-top b-6"
+                style="border-bottom-left-radius: 0; border-bottom-right-radius: 0; height: 250px;;"
+                [src]="img"
+                alt="news"
+              />
+            </mdb-carousel-item>
+          </mdb-carousel>
+          <div
+            class="card-body"
+            style="border: 1px solid #ffa200; border-top: 0;"
+          >
+            <h4
+              class="card-title text-left fs-20 font-weight-bold dark-text-alt"
+            >
+              {{ lang.userLang === 'ar' ? item.Title_Ar : item.Title }}
+            </h4>
+            <p class="card-text text-left fs-16 dark-text-alt">
+              {{
+                lang.userLang === 'ar' ? item.Description_Ar : item.Description
+              }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End Repeatable col-->
+
+      <!--End Repeatable col-->
+    </div>
+    <div class="row px-0 mx-0 pt-lg-5 pb-lg-3">
+      <nav aria-label="Page navigation example" class="mx-auto">
+        <ul class="pagination">
+          <li (click)="prev()" class="page-item">
+            <a class="page-link" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+
+          <li
+            *ngFor="let item of pagesCount; let i = index"
+            class="page-item"
+            [ngClass]="{ active: clickedIndex === i }"
+            (click)="
+              clickedIndex = i;
+              pageNumber = i + 1;
+              loadNewsAndEvents(pageNumber, pagesize)
+            "
+          >
+            <a class="page-link">{{ i + 1 }}</a>
+          </li>
+
+          <li (click)="next()" class="page-item">
+            <a class="page-link" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<!--End Section news-events-->

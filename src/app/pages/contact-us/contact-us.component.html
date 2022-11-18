@@ -1,0 +1,212 @@
+<!--Start BreadCrumb-->
+<div class="breadcrumb primary-bg br-0 mb-0">
+  <span
+    [routerLink]="['/home']"
+    routerLinkActive="router-link-active"
+    class="breadcrumb-item text-white cursor-pointer"
+    >{{ 'header.home' | translate }}</span
+  >
+  <span class="breadcrumb-item text-white">
+    <i *ngIf="lang.userLang === 'en'" class="fa fa-angle-right"></i>
+    <i *ngIf="lang.userLang === 'ar'" class="fa fa-angle-left"></i>
+  </span>
+  <span class="breadcrumb-item text-white cursor-pointer">
+    {{ 'contactUs.title' | translate }}</span
+  >
+</div>
+<!--End BreadCrumb-->
+<!--Start Section Our Products-->
+<div class="our-products" style="background: #EAEEF2">
+  <div class="text-center pb-lg-5">
+    <h2
+      class="text-center text-uppercase primary-text font-weight-bold fs-45 d-block"
+    >
+      {{ 'contactUs.title' | translate }}
+    </h2>
+  </div>
+  <div class="products-box cat-certificates p-lg-3">
+    <div class="row px-lg-5 mx-0">
+      <div class="col-lg-5 col-12 px-0">
+        <div
+          id="map"
+          class="map img-fluid w-100"
+          style="height: 800px; background-color: darkcyan !important"
+        >
+          <!-- <img src="assets/imgs/map.png" class="img-fluid w-100" alt="map" /> -->
+        </div>
+      </div>
+      <div class="col-lg-7 col-12 px-0">
+        <div class="row mx-0 bg-white px-4 pt-4">
+          <div class="col-lg-6 col-12 mb-lg-5 mb-4">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/factory.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.factory' | translate }}
+                </h5>
+                {{ 'contactUs.address' | translate }}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mb-lg-5 mb-3">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/con-call.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.factoryTel' | translate }}
+                </h5>
+                011-195-48-267 - 011-184-87-597
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mb-lg-5 mb-3">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/con-call.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.technicalSupport' | translate }}
+                </h5>
+                011-184-87-880
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mb-lg-5 mb-3">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/con-call.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.sales' | translate }}
+                </h5>
+                010-007-88-817 - 011-184-87-597
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mb-lg-5 mb-3">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/con-web.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.website' | translate }}
+                </h5>
+                www.trichem-eg.com
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mb-lg-5 mb-3">
+            <div class="media text-left">
+              <a class="d-flex" href="#">
+                <img
+                  src="assets/imgs/icons/con-mail.png"
+                  alt="icon"
+                  class="pr-3"
+                />
+              </a>
+              <div class="media-body dark-text-alt" style="line-height: 1.3;">
+                <h5 class="fs-18 dark-text-alt font-weight-bold">
+                  {{ 'contactUs.email' | translate }}
+                </h5>
+                sales@trichem-eg.com
+              </div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="row mx-0 bg-white px-4 pb-lg-5 pb-2">
+            <div class="col-12 pb-4">
+              <h2 class="primary-text fs-25 font-weight-bold text-left">
+                {{ 'contactUs.title' | translate }}
+              </h2>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="form-control dark-text-alt"
+                  placeholder="{{ 'contactUs.name' | translate }}"
+                />
+              </div>
+            </div>
+            <div class="col-lg-4 col-12">
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control dark-text-alt"
+                  placeholder="{{ 'contactUs.email' | translate }}"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12">
+              <div class="form-group">
+                <input
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  class="form-control dark-text-alt"
+                  placeholder="{{ 'contactUs.phone' | translate }}"
+                />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-group">
+                <textarea
+                  rows="10"
+                  name="msg"
+                  id="msg"
+                  class="form-control dark-text-alt"
+                  placeholder="{{ 'contactUs.message' | translate }}"
+                ></textarea>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-block primary-bg text-white fs-16"
+                >
+                  {{ 'contactUs.submit' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Section Our Products-->

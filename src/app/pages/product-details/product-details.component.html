@@ -1,0 +1,406 @@
+<!--Start BreadCrumb-->
+<div class="breadcrumb primary-bg br-0 mb-0">
+  <span [routerLink]="['/home']" routerLinkActive="router-link-active"
+    class="breadcrumb-item text-white cursor-pointer">{{ 'header.home' | translate }}</span>
+  <span class="breadcrumb-item text-white">
+    <i *ngIf="lang.userLang === 'en'" class="fa fa-angle-right"></i>
+    <i *ngIf="lang.userLang === 'ar'" class="fa fa-angle-left"></i>
+  </span>
+  <span class="breadcrumb-item text-white cursor-pointer">{{
+    'header.products' | translate
+  }}</span>
+  <span class="breadcrumb-item text-white">
+    <i *ngIf="lang.userLang === 'en'" class="fa fa-angle-right"></i>
+    <i *ngIf="lang.userLang === 'ar'" class="fa fa-angle-left"></i>
+  </span>
+  <!-- <span class="breadcrumb-item text-white cursor-pointer">Concrete Repair</span> -->
+  <!-- <span class="breadcrumb-item text-white"
+    ><i class="fa fa-angle-right"></i
+  ></span> -->
+  <span class="breadcrumb-item text-white cursor-pointer">
+    {{ lang.userLang === 'ar' ? details.Title_Ar : details.Title }}</span>
+</div>
+<!--End BreadCrumb-->
+
+<!--Start Section Products Details-->
+<div class="section-about" style="background: #EAEEF2">
+  <div class="px-lg-5">
+    <div class="text-center pb-3 pt-lg-0 pt-5">
+      <h2 class="text-center text-uppercase primary-text font-weight-bold fs-45 d-block">
+        {{ 'header.products' | translate }}
+      </h2>
+    </div>
+    <div class="search mb-lg-5">
+      <div>
+        <div class="row mx-0 px-0">
+          <div class="col-lg-6 col-12 mx-auto">
+            <input (keydown)="onKeydownEvent($event)" class="form-control text-center fs-16" name="search" id="search"
+              placeholder="{{ 'categories.searchPlaceHolder' | translate }}" />
+            <button class="br-0 bg-transparent border-0">
+              <i class="fa fa-search dark-text-alt fa-2x cursor-pointer"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Images Gallery -->
+    <!-- <div class="images-gallery p-lg-3">
+      <div class="row px-0 mx-0 pb-lg-0 pb-5">
+        <div class="col-lg-6 col-12">
+          <ngx-gallery [options]="galleryOptions" [images]="galleryImages">
+          </ngx-gallery>
+        </div>
+        <div class="col-lg-6 col-12">
+          <h2 class="fs-24 font-weight-bold text-lg-left text-center primary-danger mt-lg-0 mt-3">
+            {{ lang.userLang === 'ar' ? details.Title_Ar : details.Title }}
+          </h2>
+          <p class="text-lg-left text-center primary-text fs-16 font-weight-bold ">
+            {{
+              lang.userLang === 'ar' ? details.SubTitle_Ar : details.SubTitle
+            }}
+          </p>
+          <p class="text-lg-left text-center dark-text-alt fs-18 text-uppercase font-weight-bold mt-lg-5 mt-2">
+            {{ 'productDetails.Desc' | translate }}
+          </p>
+          <p class="fs-16 mb-0 mute-text-black text-left">
+            {{
+              lang.userLang === 'ar'
+                ? details.Description_Ar
+                : details.Description
+            }}
+          </p>
+          <div class="mt-lg-5 mt-2">
+            <span class="fs-20 font-weight-bold dark-text-alt pr-3">Share :</span>
+            <a href="#" class="d-inline-block" title="FaceBook">
+              <img class="mx-1" src="assets/imgs/icons/facebook-b.png" width="20" height="20" alt="social link" />
+            </a>
+            <a href="#" class="d-inline-block" title="Twitter">
+              <img class="mx-1" src="assets/imgs/icons/twitter-b.png" width="20" height="20" alt="social link" />
+            </a>
+            <a href="#" class="d-inline-block" title="LinkedIn">
+              <img class="mx-1" src="assets/imgs/icons/linkedin-b.png" width="20" height="20" alt="social link" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- End Image Gallery -->
+
+    <!-- Start Tabs -->
+    <div class="product-tabs px-lg-4 px-2 mt-lg-5 mt-3 pb-5">
+      <div class="row mx-0 p-2 bg-white b-6 box-shadow">
+        <div class="col-12 px-0 w-100">
+          <!-- fdfsdfdfvdv -->
+          <div class="d-flex justify-content-between align-items-center py-3 px-2" style="background: #fafafa;">
+            <h2 class="fs-24 font-weight-bold text-lg-left text-center primary-danger mb-0">
+              {{ lang.userLang === 'ar' ? details.Title_Ar : details.Title }}
+            </h2>
+            <!-- <div class="">
+              <span class="fs-20 font-weight-bold dark-text-alt pr-3"
+                >Share :</span
+              >
+              <a
+                href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftest.trichem-eg.com%2F%23%2FproductDetails%2F32&amp;src=sdkpreparse"
+                target="_blank"
+                class="d-inline-block"
+                title="FaceBook"
+              >
+                <img
+                  class="mx-1"
+                  src="assets/imgs/icons/facebook-b.png"
+                  width="20"
+                  height="20"
+                  alt="social link"
+                />
+              </a>
+              <a href="#" class="d-inline-block" title="Twitter">
+                <img
+                  class="mx-1"
+                  src="assets/imgs/icons/twitter-b.png"
+                  width="20"
+                  height="20"
+                  alt="social link"
+                />
+              </a>
+              <a href="#" class="d-inline-block" title="LinkedIn">
+                <img
+                  class="mx-1"
+                  src="assets/imgs/icons/linkedin-b.png"
+                  width="20"
+                  height="20"
+                  alt="social link"
+                />
+              </a>
+            </div> -->
+          </div>
+          <p class="mt-3 px-3 text-lg-left text-center primary-text fs-16 font-weight-normal ">
+            {{
+              lang.userLang === 'ar' ? details.SubTitle_Ar : details.SubTitle
+            }}
+          </p>
+          <div class="px-3">
+            <hr />
+          </div>
+          <p class="px-4 text-lg-left text-center dark-text-alt fs-18 text-uppercase font-weight-bold mt-2 mb-1">
+            {{ 'productDetails.Desc' | translate }}
+          </p>
+          <p class="px-4 fs-15 mb-0 mute-text-black text-left prod-desc">
+            {{
+              lang.userLang === 'ar'
+                ? details.Description_Ar
+                : details.Description
+            }}
+          </p>
+
+          <div class="col-12 mx-auto">
+            <hr style="border-top: 2px dashed rgba(0, 0, 0, 0.58);" />
+          </div>
+          
+          <div style="float: right;" class="col-12 mx-auto">
+            <p class="px-4 text-lg-left text-center dark-text-alt fs-18 text-uppercase font-weight-bold mt-2 mb-1">
+              {{
+                lang.userLang === 'ar' ? 'صور المنتج' : 'Product Photos'
+              }}
+            </p>
+           <ng-container *ngFor="let imgPath of details?.ImageURLs;let i = index">
+             <img style="float: right;width: 160px;height: 160px;margin: 10px;" [src]="galleryImages[i].big"/>
+           </ng-container>
+          </div>
+         
+        </div>
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link text-left active" id="v-pills-tabOne-tab" data-toggle="pill" href="#v-pills-tabOne"
+            role="tab" aria-controls="v-pills-tabOne" aria-selected="true">
+            {{ 'productDetails.typicalApps' | translate }}</a>
+          <a class="nav-link text-left" id="v-pills-tabTwo-tab" data-toggle="pill" href="#v-pills-tabTwo" role="tab"
+            aria-controls="v-pills-tabTwo" aria-selected="false">{{ 'productDetails.productFeatures' | translate }}</a>
+          <a class="nav-link text-left" id="v-pills-tabThree-tab" data-toggle="pill" href="#v-pills-tabThree" role="tab"
+            aria-controls="v-pills-tabThree" aria-selected="false">{{ 'productDetails.props' | translate }}</a>
+        </div>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active h-100" id="v-pills-tabOne" role="tabpanel"
+            aria-labelledby="v-pills-tabOne-tab">
+            <div class="row mx-0 h-100">
+              <div class="col-12 pl-lg-4 pt-3">
+                <div class="row mx-0 h-100">
+                  <div class="col-lg-8 col-12">
+                    <p class="fs-16 mb-0 mute-text-black text-left">
+                      {{
+                        lang.userLang === 'ar'
+                          ? details.TypicalApplication_Ar
+                          : details.TypicalApplication
+                      }}
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-12 position-relative">
+                    <div class="pdf-container">
+                      <a [href]="
+                          lang.userLang === 'ar'
+                            ? details.DataSheetPath_Ar
+                            : details.DataSheetPath
+                        " target="_blank" class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">{{
+                              'productDetails.tds' | translate
+                            }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                      <a *ngIf="details.CertificatePath" [href]="details.CertificatePath" target="_blank"
+                        class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">
+                              {{
+                                'productDetails.certificate' | translate
+                              }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade h-100" id="v-pills-tabTwo" role="tabpanel" aria-labelledby="v-pills-tabTwo-tab">
+            <div class="row mx-0 h-100">
+              <div class="col-12 pl-lg-4 pt-3">
+                <div class="row mx-0 h-100">
+                  <div class="col-lg-8 col-12">
+                    <p class="fs-16 mb-0 mute-text-black text-left">
+                      {{
+                        lang.userLang === 'ar'
+                          ? details.ProductFeatures_Ar
+                          : details.ProductFeatures
+                      }}
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-12 position-relative">
+                    <div class="pdf-container">
+                      <a [href]="
+                          lang.userLang === 'ar'
+                            ? details.DataSheetPath_Ar
+                            : details.DataSheetPath
+                        " target="_blank" class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">{{
+                              'productDetails.tds' | translate
+                            }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                      <a *ngIf="details.CertificatePath" [href]="details.CertificatePath" target="_blank"
+                        class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">
+                              {{
+                                'productDetails.certificate' | translate
+                              }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade h-100" id="v-pills-tabThree" role="tabpanel" aria-labelledby="v-pills-tabThree-tab">
+            <div class="row mx-0 h-100">
+              <div class="col-12 pl-lg-4 pt-3">
+                <div class="row mx-0 h-100">
+                  <div class="col-lg-8 col-12">
+                    <p class="fs-16 mb-0 mute-text-black text-left">
+                      {{
+                        lang.userLang === 'ar'
+                          ? details.Properties_Ar
+                          : details.Properties
+                      }}
+                    </p>
+                  </div>
+                  <div class="col-lg-4 col-12 position-relative">
+                    <div class="pdf-container">
+                      <a [href]="
+                          lang.userLang === 'ar'
+                            ? details.DataSheetPath_Ar
+                            : details.DataSheetPath
+                        " target="_blank" class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">{{
+                              'productDetails.tds' | translate
+                            }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                      <a *ngIf="details.CertificatePath" [href]="details.CertificatePath" target="_blank"
+                        class="pdf py-2 px-3 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                          <img class="" src="assets/imgs/icons/pdf.png" alt="pdf" />
+                          <span class="pl-3">
+                            <span class="d-block dark-text-alt fs-14">{{
+                              'productDetails.certificate' | translate
+                            }}</span>
+                            <span class="d-block primary-text fs-12"> </span>
+                          </span>
+                        </div>
+                        <img class="" src="assets/imgs/icons/down-arrow.png" alt="pdf" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Tabs -->
+
+    <!--Start Related Products-->
+    <div class="pt-lg-5 mt-lg-5" style="background: #EAEEF2">
+      <div class="text-center pb-3 pt-lg-0 pt-5">
+        <h2 class="text-center text-uppercase primary-text font-weight-bold fs-24 d-block pb-4">
+          {{ 'productDetails.relatedProducts' | translate }}
+        </h2>
+      </div>
+      <div class="products-box p-lg-3">
+        <div class="row px-0 mx-0">
+          <!--Start Repeatable col-->
+          <!-- <div *ngFor="let product of relatedProducts" class="col-lg-3 col-md-4 col-12 mb-3 b-6">
+            <div [routerLink]="['/productDetails', product.Id]" class="pro-box position-relative b-6">
+              <div class="pro-overlay"></div>
+              <div class="hovering-overlay"></div>
+              <img src="assets/imgs/products/pro-1.png" style="width: 100%;" alt="products" />
+              <div class="pro-caption text-center">
+                <span class="title fs-20 font-weight-bold text-white d-block">{{
+                  lang.userLang === 'ar' ? product.Title_Ar : product.Title
+                }}</span>
+                <button type="button" [routerLink]="['/productDetails', product.Id]"
+                  routerLinkActive="router-link-active"
+                  class="btn btn-sm fs-16 text-white b-18 d-block mx-auto white-border px-4">
+                  {{ 'home.viewDetails' | translate }}
+                </button>
+              </div>
+            </div>
+          </div> -->
+          <!--End Repeatable col-->
+
+          <!--Start Repeatable col-->
+          <div *ngFor="let product of relatedProducts" class="col-lg-4 col-md-4 col-12 mb-3 b-6 cats">
+            <!-- Card Light -->
+            <div class="card bg-white" [routerLink]="['/productDetails', product.Id]">
+              <!-- Card content -->
+              <div class="card-body">
+                <!-- Title -->
+                <h4 class="card-title text-left">
+                  {{
+                    lang.userLang === 'ar' ? product.Title_Ar : product.Title
+                  }}
+                </h4>
+                <hr />
+                <!-- Text -->
+                <p class="card-text text-left">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <!-- Link -->
+                <a [routerLink]="['/productDetails', product.Id]" class="black-text d-flex justify-content-end">
+                  <h5>
+                    {{ 'home.viewDetails' | translate }}
+                    <i class="fa fa-angle-double-right"></i>
+                  </h5>
+                </a>
+              </div>
+            </div>
+            <!-- Card Light -->
+          </div>
+          <!--End Repeatable col-->
+        </div>
+      </div>
+    </div>
+    <!--End Related Products-->
+  </div>
+  <!--End Section Products Details-->
+</div>
